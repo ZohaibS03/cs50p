@@ -4,7 +4,7 @@ def main():
     while True:
         try:
             user_function = input("Addition, division, multiplication or subtraction? ")
-        except user_function.lower() != "additino" or "division" or "multiplication" or "subtraction":
+        except user_function.lower() != "addition" and "division" and "multiplication" and "subtraction":
             print("Please enter correct name of function, ensure spelling is correct")
         else:
             break
@@ -17,16 +17,16 @@ def main():
             print(multiplication(num1, num2))
         case "subtraction":
             print(subtraction(num1, num2))
+        case _:
+            print("Please enter")
 
 
 def get_number():
     while True:
         try:
-            x = int(input("Number: "))
+            return int(input("Number: "))
         except ValueError:
             print("Please enter intergers only...")
-        else:
-            return x
 
 
 def addition(a, b):
@@ -38,7 +38,7 @@ def division(a, b):
 
 
 def multiplication(a, b):
-    return a - b
+    return a * b
 
 
 def subtraction(a, b):
